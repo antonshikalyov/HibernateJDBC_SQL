@@ -1,0 +1,2213 @@
+2022-февр.-19 10:45:48 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-февр.-19 10:45:48 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-февр.-19 10:45:48 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-февр.-19 10:45:48 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-февр.-19 10:45:48 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-февр.-19 10:45:48 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-февр.-19 10:45:48 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-февр.-19 10:45:49 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        [34muser[0m
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        products0_.idUser [34mas[0m iduser2_3_0_,
+        products0_.idProduct [34mas[0m idproduc1_3_0_,
+        productshi1_.idProduct [34mas[0m idproduc1_1_1_,
+        productshi1_.cost [34mas[0m cost2_1_1_,
+        productshi1_.discription [34mas[0m discript3_1_1_,
+        productshi1_.idSeller [34mas[0m idseller5_1_1_,
+        productshi1_.nameOfProduct [34mas[0m nameofpr4_1_1_,
+        sellerhibe2_.idSeller [34mas[0m idseller1_2_2_,
+        sellerhibe2_.name [34mas[0m name2_2_2_,
+        sellerhibe2_.surname [34mas[0m surname3_2_2_ 
+    [34mfrom[0m
+        shop_cart products0_ 
+    [34minner[0m [34mjoin[0m
+        products productshi1_ 
+            [34mon[0m products0_.idProduct=productshi1_.idProduct 
+    [34mleft[0m [34mouter[0m [34mjoin[0m
+        seller sellerhibe2_ 
+            [34mon[0m productshi1_.idSeller=sellerhibe2_.idSeller 
+    [34mwhere[0m
+        products0_.idUser=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        users0_.idProduct [34mas[0m idproduc1_3_0_,
+        users0_.idUser [34mas[0m iduser2_3_0_,
+        usershiber1_.idUser [34mas[0m iduser1_4_1_,
+        usershiber1_.name [34mas[0m name2_4_1_,
+        usershiber1_.surname [34mas[0m surname3_4_1_ 
+    [34mfrom[0m
+        shop_cart users0_ 
+    [34minner[0m [34mjoin[0m
+        [34muser[0m usershiber1_ 
+            [34mon[0m users0_.idUser=usershiber1_.idUser 
+    [34mwhere[0m
+        users0_.idProduct=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        users0_.idProduct [34mas[0m idproduc1_3_0_,
+        users0_.idUser [34mas[0m iduser2_3_0_,
+        usershiber1_.idUser [34mas[0m iduser1_4_1_,
+        usershiber1_.name [34mas[0m name2_4_1_,
+        usershiber1_.surname [34mas[0m surname3_4_1_ 
+    [34mfrom[0m
+        shop_cart users0_ 
+    [34minner[0m [34mjoin[0m
+        [34muser[0m usershiber1_ 
+            [34mon[0m users0_.idUser=usershiber1_.idUser 
+    [34mwhere[0m
+        users0_.idProduct=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        users0_.idProduct [34mas[0m idproduc1_3_0_,
+        users0_.idUser [34mas[0m iduser2_3_0_,
+        usershiber1_.idUser [34mas[0m iduser1_4_1_,
+        usershiber1_.name [34mas[0m name2_4_1_,
+        usershiber1_.surname [34mas[0m surname3_4_1_ 
+    [34mfrom[0m
+        shop_cart users0_ 
+    [34minner[0m [34mjoin[0m
+        [34muser[0m usershiber1_ 
+            [34mon[0m users0_.idUser=usershiber1_.idUser 
+    [34mwhere[0m
+        users0_.idProduct=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        products0_.idUser [34mas[0m iduser2_3_0_,
+        products0_.idProduct [34mas[0m idproduc1_3_0_,
+        productshi1_.idProduct [34mas[0m idproduc1_1_1_,
+        productshi1_.cost [34mas[0m cost2_1_1_,
+        productshi1_.discription [34mas[0m discript3_1_1_,
+        productshi1_.idSeller [34mas[0m idseller5_1_1_,
+        productshi1_.nameOfProduct [34mas[0m nameofpr4_1_1_,
+        sellerhibe2_.idSeller [34mas[0m idseller1_2_2_,
+        sellerhibe2_.name [34mas[0m name2_2_2_,
+        sellerhibe2_.surname [34mas[0m surname3_2_2_ 
+    [34mfrom[0m
+        shop_cart products0_ 
+    [34minner[0m [34mjoin[0m
+        products productshi1_ 
+            [34mon[0m products0_.idProduct=productshi1_.idProduct 
+    [34mleft[0m [34mouter[0m [34mjoin[0m
+        seller sellerhibe2_ 
+            [34mon[0m productshi1_.idSeller=sellerhibe2_.idSeller 
+    [34mwhere[0m
+        products0_.idUser=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        products0_.idUser [34mas[0m iduser2_3_0_,
+        products0_.idProduct [34mas[0m idproduc1_3_0_,
+        productshi1_.idProduct [34mas[0m idproduc1_1_1_,
+        productshi1_.cost [34mas[0m cost2_1_1_,
+        productshi1_.discription [34mas[0m discript3_1_1_,
+        productshi1_.idSeller [34mas[0m idseller5_1_1_,
+        productshi1_.nameOfProduct [34mas[0m nameofpr4_1_1_,
+        sellerhibe2_.idSeller [34mas[0m idseller1_2_2_,
+        sellerhibe2_.name [34mas[0m name2_2_2_,
+        sellerhibe2_.surname [34mas[0m surname3_2_2_ 
+    [34mfrom[0m
+        shop_cart products0_ 
+    [34minner[0m [34mjoin[0m
+        products productshi1_ 
+            [34mon[0m products0_.idProduct=productshi1_.idProduct 
+    [34mleft[0m [34mouter[0m [34mjoin[0m
+        seller sellerhibe2_ 
+            [34mon[0m productshi1_.idSeller=sellerhibe2_.idSeller 
+    [34mwhere[0m
+        products0_.idUser=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        products0_.idUser [34mas[0m iduser2_3_0_,
+        products0_.idProduct [34mas[0m idproduc1_3_0_,
+        productshi1_.idProduct [34mas[0m idproduc1_1_1_,
+        productshi1_.cost [34mas[0m cost2_1_1_,
+        productshi1_.discription [34mas[0m discript3_1_1_,
+        productshi1_.idSeller [34mas[0m idseller5_1_1_,
+        productshi1_.nameOfProduct [34mas[0m nameofpr4_1_1_,
+        sellerhibe2_.idSeller [34mas[0m idseller1_2_2_,
+        sellerhibe2_.name [34mas[0m name2_2_2_,
+        sellerhibe2_.surname [34mas[0m surname3_2_2_ 
+    [34mfrom[0m
+        shop_cart products0_ 
+    [34minner[0m [34mjoin[0m
+        products productshi1_ 
+            [34mon[0m products0_.idProduct=productshi1_.idProduct 
+    [34mleft[0m [34mouter[0m [34mjoin[0m
+        seller sellerhibe2_ 
+            [34mon[0m productshi1_.idSeller=sellerhibe2_.idSeller 
+    [34mwhere[0m
+        products0_.idUser=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        products0_.idUser [34mas[0m iduser2_3_0_,
+        products0_.idProduct [34mas[0m idproduc1_3_0_,
+        productshi1_.idProduct [34mas[0m idproduc1_1_1_,
+        productshi1_.cost [34mas[0m cost2_1_1_,
+        productshi1_.discription [34mas[0m discript3_1_1_,
+        productshi1_.idSeller [34mas[0m idseller5_1_1_,
+        productshi1_.nameOfProduct [34mas[0m nameofpr4_1_1_,
+        sellerhibe2_.idSeller [34mas[0m idseller1_2_2_,
+        sellerhibe2_.name [34mas[0m name2_2_2_,
+        sellerhibe2_.surname [34mas[0m surname3_2_2_ 
+    [34mfrom[0m
+        shop_cart products0_ 
+    [34minner[0m [34mjoin[0m
+        products productshi1_ 
+            [34mon[0m products0_.idProduct=productshi1_.idProduct 
+    [34mleft[0m [34mouter[0m [34mjoin[0m
+        seller sellerhibe2_ 
+            [34mon[0m productshi1_.idSeller=sellerhibe2_.idSeller 
+    [34mwhere[0m
+        products0_.idUser=?
+2022-февр.-19 10:45:50 AM [main] DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        products0_.idUser [34mas[0m iduser2_3_0_,
+        products0_.idProduct [34mas[0m idproduc1_3_0_,
+        productshi1_.idProduct [34mas[0m idproduc1_1_1_,
+        productshi1_.cost [34mas[0m cost2_1_1_,
+        productshi1_.discription [34mas[0m discript3_1_1_,
+        productshi1_.idSeller [34mas[0m idseller5_1_1_,
+        productshi1_.nameOfProduct [34mas[0m nameofpr4_1_1_,
+        sellerhibe2_.idSeller [34mas[0m idseller1_2_2_,
+        sellerhibe2_.name [34mas[0m name2_2_2_,
+        sellerhibe2_.surname [34mas[0m surname3_2_2_ 
+    [34mfrom[0m
+        shop_cart products0_ 
+    [34minner[0m [34mjoin[0m
+        products productshi1_ 
+            [34mon[0m products0_.idProduct=productshi1_.idProduct 
+    [34mleft[0m [34mouter[0m [34mjoin[0m
+        seller sellerhibe2_ 
+            [34mon[0m productshi1_.idSeller=sellerhibe2_.idSeller 
+    [34mwhere[0m
+        products0_.idUser=?
+2022-мар.-10 21:05:20 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-10 21:05:21 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-10 21:05:21 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-10 21:05:21 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-10 21:05:21 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-10 21:05:21 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-10 21:05:21 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-10 21:05:22 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-10 21:05:24 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-10 21:06:11 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-10 21:06:11 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-10 21:06:12 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-10 21:06:12 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-10 21:06:12 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-10 21:06:12 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-10 21:06:12 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-10 21:06:12 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-10 21:06:13 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-16 20:33:07 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-16 20:33:09 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-16 20:33:09 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-16 20:33:09 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-16 20:33:09 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-16 20:33:09 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-16 20:33:09 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-16 20:33:10 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-16 20:33:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-16 20:33:40 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-16 20:33:41 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-16 20:33:41 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-16 20:33:41 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-16 20:33:41 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-16 20:33:41 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-16 20:33:41 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-16 20:33:41 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-16 20:33:43 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-16 20:34:17 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-16 20:34:18 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-16 20:34:18 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-16 20:34:18 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-16 20:34:18 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-16 20:34:18 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-16 20:34:18 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-16 20:34:18 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-16 20:34:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-16 20:34:50 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-16 20:34:51 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-16 20:34:51 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-16 20:34:51 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-16 20:34:51 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-16 20:34:51 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-16 20:34:51 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-16 20:34:51 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-16 20:34:53 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:03:48 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:03:51 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:03:52 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:03:52 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:03:52 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:03:52 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:03:52 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:03:53 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:03:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:05:04 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:05:06 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:05:06 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:05:06 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:05:06 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:05:06 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:05:06 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:05:07 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:05:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:06:11 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:06:13 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:06:13 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:06:13 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:06:13 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:06:13 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:06:13 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:06:14 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:06:16 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:06:17 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:07:12 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:07:14 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:07:14 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:07:14 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:07:14 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:07:14 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:07:14 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:07:14 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:07:18 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:07:18 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:07:55 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:07:56 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:07:56 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:07:56 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:07:56 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:07:56 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:07:56 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:07:57 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:08:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:08:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:08:35 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:08:36 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:08:37 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:08:37 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:08:37 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:08:37 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:08:37 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:08:37 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:08:41 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:08:41 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:09:27 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:09:29 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:09:29 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:09:29 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:09:29 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:09:29 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:09:29 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:09:30 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:09:33 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:09:33 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:09:52 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:09:54 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:09:54 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:09:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:09:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:09:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:09:54 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:09:55 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:09:58 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:09:58 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:29:47 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:29:48 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:29:48 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:29:48 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:29:48 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:29:48 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:29:48 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:29:48 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:29:49 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:29:49 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:30:22 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:30:23 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:30:23 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:30:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:30:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:30:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:30:23 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:30:23 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:30:24 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:30:24 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-18 23:32:23 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:32:23 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:32:23 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:32:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:32:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:32:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:32:23 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:32:24 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:32:25 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-18 23:38:53 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-18 23:38:54 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-18 23:38:54 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-18 23:38:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-18 23:38:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-18 23:38:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-18 23:38:54 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-18 23:38:54 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-18 23:38:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:09:31 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:09:32 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:09:32 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:09:32 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:09:32 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:09:32 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:09:32 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:09:33 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:09:34 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:11:37 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:11:38 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:11:38 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:11:38 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:11:38 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:11:38 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:11:38 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:11:38 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:11:39 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:12:52 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:12:52 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:12:52 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:12:52 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:12:52 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:12:52 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:12:52 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:12:53 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:12:54 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:13:05 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:13:06 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:13:06 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:13:06 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:13:06 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:13:06 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:13:06 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:13:06 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:13:07 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:13:56 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:13:57 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:13:57 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:13:57 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:13:57 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:13:57 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:13:57 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:13:57 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:13:58 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:14:17 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:14:18 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:14:18 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:14:18 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:14:18 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:14:18 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:14:18 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:14:18 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:14:19 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:14:43 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:14:44 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:14:44 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:14:44 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:14:44 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:14:44 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:14:44 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:14:44 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:14:45 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:16:01 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:16:02 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:16:02 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:16:02 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:16:02 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:16:02 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:16:02 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:16:02 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:16:03 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 00:16:26 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 00:16:27 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 00:16:27 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 00:16:27 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 00:16:27 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 00:16:27 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 00:16:27 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 00:16:27 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 00:16:29 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 10:09:00 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 10:09:03 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 10:09:03 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 10:09:03 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 10:09:03 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 10:09:03 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 10:09:04 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 10:09:05 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 10:09:08 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 10:09:08 AM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-19 10:09:08 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-19 10:09:08 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-19 10:11:11 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 10:11:14 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 10:11:14 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 10:11:14 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 10:11:14 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 10:11:14 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 10:11:14 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 10:11:15 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 10:11:20 AM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-19 10:11:20 AM [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2022-мар.-19 10:12:01 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 10:12:02 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 10:12:02 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 10:12:02 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 10:12:02 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 10:12:02 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 10:12:02 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 10:12:02 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 10:12:04 AM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-19 10:12:05 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-19 10:14:53 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 10:14:54 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 10:14:54 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 10:14:55 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 10:14:55 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 10:14:55 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 10:14:55 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 10:14:55 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 10:14:56 AM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-19 10:14:56 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-19 10:16:12 AM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-19 10:16:12 AM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-19 10:16:12 AM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-19 10:16:12 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-19 10:16:12 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-19 10:16:12 AM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-19 10:16:12 AM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-19 10:16:13 AM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-19 10:16:14 AM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-19 10:16:14 AM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 22:49:44 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 22:49:45 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 22:49:45 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 22:49:45 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 22:49:45 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 22:49:45 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 22:49:45 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 22:49:46 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 22:49:47 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 22:49:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:49:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 22:50:43 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 22:50:43 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 22:50:44 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 22:50:44 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 22:50:44 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 22:50:44 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 22:50:44 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 22:50:44 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 22:50:45 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:50:45 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 22:54:53 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 22:54:54 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 22:54:54 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 22:54:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 22:54:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 22:54:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 22:54:54 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 22:54:54 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 22:54:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:54:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:54:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 22:54:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 22:54:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:07:09 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:07:09 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:07:09 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:07:09 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:07:09 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:07:09 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:07:09 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:07:10 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:07:11 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:07:11 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:07:11 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:07:11 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:07:12 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:07:46 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:07:46 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:07:46 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:07:46 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:07:46 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:07:46 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:07:46 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:07:47 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:07:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:07:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:07:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:08:57 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:08:58 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:08:58 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:08:58 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:08:58 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:08:58 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:08:58 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:08:58 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:08:59 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:08:59 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:09:13 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:09:14 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:09:14 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:09:14 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:09:14 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:09:14 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:09:14 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:09:14 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:09:15 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:09:15 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:09:15 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:09:15 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:09:15 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:09:15 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:09:16 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:09:16 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:09:16 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:09:16 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:09:16 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:09:16 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:27:05 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:27:06 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:27:06 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:27:06 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:27:06 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:27:06 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:27:06 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:27:06 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:27:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:27:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:27:11 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:29:18 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:29:19 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:29:19 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:29:19 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:29:19 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:29:19 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:29:19 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:29:19 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:29:20 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:29:21 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:21 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:21 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:21 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:29:52 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:29:53 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:29:53 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:29:53 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:29:53 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:29:53 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:29:53 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:29:53 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:29:54 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:54 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:54 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:29:54 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:29:54 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:29:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:29:55 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:37:07 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:37:08 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:37:08 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:37:08 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:37:08 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:37:08 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:37:08 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:37:08 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:37:10 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:38:04 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:38:05 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:38:05 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:38:05 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:38:05 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:38:05 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:38:05 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:38:05 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:38:06 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:38:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:38:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:38:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:38:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:38:54 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:38:54 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:38:54 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:38:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:38:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:38:54 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:38:54 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:38:55 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:38:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:38:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:38:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:38:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:38:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:38:56 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:39:25 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:39:25 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:39:26 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:39:26 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:39:26 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:39:26 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:39:26 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:39:26 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:27 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:39:33 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:39:34 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:39:34 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:39:34 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:39:34 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:39:34 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:39:34 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:39:34 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:39:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:39:59 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:40:00 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:40:00 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:40:00 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:40:00 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:40:00 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:40:00 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:40:00 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:40:01 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:42:35 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:42:36 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:42:36 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:42:36 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:42:36 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:42:36 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:42:36 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:42:36 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:42:38 PM [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:38 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:42:44 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:42:45 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:42:45 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:42:45 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:42:45 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:42:45 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:42:45 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:42:45 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:42:46 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:46 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:46 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:42:46 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:42:46 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:46 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:42:46 PM [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2022-мар.-21 23:42:47 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:42:47 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:47 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:47 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:42:47 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:43:03 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:43:04 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:43:04 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:43:04 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:43:04 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:43:04 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:43:04 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:43:04 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:43:05 PM [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:05 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:43:34 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:43:34 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:43:34 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:43:34 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:43:34 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:43:34 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:43:34 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:43:34 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:43:36 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:36 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:43:36 PM [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2022-мар.-21 23:43:49 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:43:50 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:43:50 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:43:50 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:43:50 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:43:50 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:43:50 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:43:50 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:43:51 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:43:51 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:43:52 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:44:32 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:44:32 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:44:32 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:44:33 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:44:33 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:44:33 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:44:33 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:44:33 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:44:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:46:46 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:46:46 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:46:46 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:46:46 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:46:46 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:46:46 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:46:46 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:46:47 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:46:48 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-21 23:47:16 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:47:16 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:47:17 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:47:17 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:47:17 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:47:17 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:47:17 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:47:17 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:47:18 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:47:32 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-21 23:47:33 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-21 23:47:33 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-21 23:47:33 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-21 23:47:33 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-21 23:47:33 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-21 23:47:33 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-21 23:47:33 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-21 23:47:34 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-21 23:47:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        seller 
+    [34mset[0m
+        name=?,
+        surname=? 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-21 23:47:35 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-23 22:04:02 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-23 22:04:04 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-23 22:04:04 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-23 22:04:04 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-23 22:04:04 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-23 22:04:04 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-23 22:04:04 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-23 22:04:05 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-23 22:04:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-23 22:04:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-23 22:04:07 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-23 22:04:24 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-23 22:04:26 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-23 22:04:26 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-23 22:04:26 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-23 22:04:26 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-23 22:04:26 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-23 22:04:26 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-23 22:04:27 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-23 22:04:29 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-23 22:04:29 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-23 22:04:29 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-23 22:06:03 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-23 22:06:05 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-23 22:06:05 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-23 22:06:05 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-23 22:06:05 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-23 22:06:05 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-23 22:06:05 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-23 22:06:06 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-23 22:06:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-23 22:06:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller 
+    [34mWHERE[0m
+        idSeller = ?
+2022-мар.-23 22:06:08 PM [main] DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        seller 
+    [34mwhere[0m
+        idSeller=?
+2022-мар.-23 22:07:22 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-23 22:07:23 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-23 22:07:23 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-23 22:07:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-23 22:07:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-23 22:07:23 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-23 22:07:23 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-23 22:07:23 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-23 22:07:25 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-23 22:07:25 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-23 22:07:25 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-23 22:08:01 PM [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-мар.-23 22:08:02 PM [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-мар.-23 22:08:02 PM [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-мар.-23 22:08:02 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/db_shop]
+2022-мар.-23 22:08:02 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+2022-мар.-23 22:08:02 PM [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2022-мар.-23 22:08:02 PM [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-мар.-23 22:08:03 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-мар.-23 22:08:04 PM [main] DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        seller
+        (name, surname) 
+    [34mvalues[0m
+        (?, ?)
+2022-мар.-23 22:08:04 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller
+2022-мар.-23 22:08:04 PM [main] DEBUG org.hibernate.SQL - 
+    [34mSELECT[0m
+        * 
+    [34mFROM[0m
+        seller

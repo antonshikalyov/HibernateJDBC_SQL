@@ -1,26 +1,18 @@
 package Util;
 
 
-import Entity.Orders;
-import Entity.Products;
-import Entity.Seller;
-import Entity.User;
 import EntityHibernate.OrdersHibernate;
 import EntityHibernate.ProductsHibernate;
 import EntityHibernate.SellerHibernate;
 import EntityHibernate.UsersHibernate;
 
-import Service.OrdersService;
-import Service.ProductsService;
-import Service.SellerService;
-import Service.UserService;
 import ServiseHibernate.OrdersServiceHibernate;
 import ServiseHibernate.ProductsServiceHibernate;
-import ServiseHibernate.SellerServiceHimernate;
+import ServiseHibernate.SellerServiceHibernate;
 import ServiseHibernate.UserServiceHibernate;
 
-import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -31,7 +23,7 @@ public class Main {
 
         UserServiceHibernate userServiceHibernate = new UserServiceHibernate();
         ProductsServiceHibernate productsServiceHibernate = new ProductsServiceHibernate();
-        SellerServiceHimernate sellerServiceHimernate = new SellerServiceHimernate();
+        SellerServiceHibernate sellerServiceHimernate = new SellerServiceHibernate();
         OrdersServiceHibernate ordersServiceHibernate = new OrdersServiceHibernate();
 
         UsersHibernate usersHibernate = new UsersHibernate();
@@ -48,12 +40,18 @@ public class Main {
 
 
         try {
+            ArrayList<SellerHibernate> sellers = (ArrayList<SellerHibernate>) sellerServiceHimernate.getAll();
+            SellerHibernate thisId = sellers.get(sellers.size()-1);
+            System.out.println(thisId.getName());
+
+//            System.out.println(sellerServiceHimernate.getId());
 
 //            UsersHibernate user1 = userServiceHibernate.getId(34);
 //            List<ProductsHibernate> productsList = productsServiceHibernate.getAll();
 //            user1.setProducts(productsList);
 //            userServiceHibernate.update(user1);
-              userServiceHibernate.getAll();
+//            System.out.println(userServiceHibernate.getAll());
+//            sellerServiceHimernate.getId(1);
 
 //            userServiceHibernate.add(usersHibernate);
             //productsServiceHibernate.add(productsHibernate);

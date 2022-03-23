@@ -8,7 +8,7 @@ import org.hibernate.query.NativeQuery;
 import java.sql.SQLException;
 import java.util.List;
 
-public class SellerServiceHimernate extends HibernateSession {
+public class SellerServiceHibernate extends HibernateSession {
     Session session = null;
 
     public void add(SellerHibernate seller) throws SQLException {
