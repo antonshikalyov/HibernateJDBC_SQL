@@ -13,24 +13,16 @@ public class Shop_cartService extends DBDriver implements Shop_cartDAO {
 
     @Override
     public void add(Shop_cart shop_cart) throws SQLException {
-        PreparedStatement preparedStatement = null;
+
         String sql = "INSERT INTO SHOP_CART (idUser, idProduct) VALUES (?,?)";
 
-        try {
-            preparedStatement = connection.prepareStatement(sql);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setInt(1, shop_cart.getIdUser());
             preparedStatement.setInt(2, shop_cart.getIdProduct());
 
             preparedStatement.executeUpdate();
         }catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-            if (preparedStatement == null){
-                preparedStatement.close();
-            }
-            if (connection == null){
-                connection.close();
-            }
         }
     }
 

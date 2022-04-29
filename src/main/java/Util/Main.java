@@ -1,11 +1,17 @@
 package Util;
 
 
+import Entity.Products;
+import Entity.Shop_cart;
+import Entity.User;
 import EntityHibernate.OrdersHibernate;
 import EntityHibernate.ProductsHibernate;
 import EntityHibernate.SellerHibernate;
 import EntityHibernate.UsersHibernate;
 
+import Service.ProductsService;
+import Service.Shop_cartService;
+import Service.UserService;
 import ServiseHibernate.OrdersServiceHibernate;
 import ServiseHibernate.ProductsServiceHibernate;
 import ServiseHibernate.SellerServiceHibernate;
@@ -17,7 +23,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        JavaHibernate.getSessionFactory();
+        JavaHibernate.getSessionFactory();
 
 
 
@@ -39,10 +45,10 @@ public class Main {
 
 
 
-        try {
-            ArrayList<SellerHibernate> sellers = (ArrayList<SellerHibernate>) sellerServiceHimernate.getAll();
-            SellerHibernate thisId = sellers.get(sellers.size()-1);
-            System.out.println(thisId.getName());
+//        try {
+//            ArrayList<SellerHibernate> sellers = (ArrayList<SellerHibernate>) sellerServiceHimernate.getAll();
+//            SellerHibernate thisId = sellers.get(sellers.size()-1);
+//            System.out.println(thisId.getName());
 
 //            System.out.println(sellerServiceHimernate.getId());
 
@@ -73,8 +79,18 @@ public class Main {
 //            System.out.println(products1);
 //            user1.setProducts(products1);
 //            userServiceHibernate.update(user1);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+        SellerServiceHibernate sellerServiceHibernate = new SellerServiceHibernate();
+        SellerHibernate sellerHibernate1 = new SellerHibernate();
+        sellerHibernate1.setIdSeller(68);
+
+        try {
+            sellerServiceHibernate.remove(sellerHibernate1);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 }

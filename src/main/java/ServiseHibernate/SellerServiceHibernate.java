@@ -25,10 +25,10 @@ public class SellerServiceHibernate extends HibernateSession {
         closeTransaction();
     }
 
-    public void remove(SellerHibernate idSeller) throws SQLException {
+    public void remove(SellerHibernate seller) throws SQLException {
         openTransaction();
         session = getSession();
-        session.remove(idSeller);
+        session.remove(seller);
         closeTransaction();
     }
 

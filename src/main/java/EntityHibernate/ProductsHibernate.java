@@ -2,6 +2,7 @@ package EntityHibernate;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "products")
@@ -18,7 +19,7 @@ public class ProductsHibernate {
 
     @ManyToOne()
     @JoinColumn(name = "idSeller")
-    private SellerHibernate idSeller;
+    private SellerHibernate seller;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,
             CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
@@ -64,12 +65,12 @@ public class ProductsHibernate {
         this.discription = discription;
     }
 
-    public SellerHibernate getIdSeller() {
-        return idSeller;
+    public SellerHibernate getSeller() {
+        return seller;
     }
 
-    public void setIdSeller(SellerHibernate idSeller) {
-        this.idSeller = idSeller;
+    public void setSeller(SellerHibernate idSeller) {
+        this.seller = idSeller;
     }
 
     public List<UsersHibernate> getUsers() {
@@ -87,7 +88,20 @@ public class ProductsHibernate {
                 ", nameOfProduct='" + nameOfProduct + '\'' +
                 ", cost=" + cost +
                 ", discription='" + discription + '\'' +
-                ", idSeller=" + idSeller +
+                ", idSeller=" + seller.getIdSeller() +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductsHibernate that = (ProductsHibernate) o;
+        return idProduct == that.idProduct && cost == that.cost && Objects.equals(nameOfProduct, that.nameOfProduct) && Objects.equals(discription, that.discription) && Objects.equals(seller, that.seller);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idProduct, nameOfProduct, cost, discription, seller);
     }
 }

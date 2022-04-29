@@ -1,6 +1,7 @@
 package EntityHibernate;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "orders")
@@ -9,11 +10,11 @@ public class OrdersHibernate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idOrder;
 
-    @ManyToOne()
+    @ManyToOne(cascade = {})
     @JoinColumn(name = "idUser")
     private UsersHibernate idUser;
 
-    @ManyToOne()
+    @ManyToOne(cascade = {})
     @JoinColumn(name = "idProduct")
     private ProductsHibernate idProduct;
 
@@ -48,5 +49,18 @@ public class OrdersHibernate {
                 ", idUser=" + idUser +
                 ", idProduct=" + idProduct +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        OrdersHibernate that = (OrdersHibernate) o;
+        return idOrder == that.idOrder && Objects.equals(idUser, that.idUser) && Objects.equals(idProduct, that.idProduct);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idOrder, idUser, idProduct);
     }
 }

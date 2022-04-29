@@ -1,6 +1,7 @@
 package EntityHibernate;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -14,7 +15,7 @@ public class SellerHibernate {
     @Column(name = "surname")
     private String surname;
 
-    @OneToMany(mappedBy = "idSeller", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "seller", fetch = FetchType.EAGER)
     private Set<ProductsHibernate> products;
 
     public int getIdSeller() {
@@ -54,6 +55,20 @@ public class SellerHibernate {
         return "SellerHibernate{" +
                 "idSeller=" + idSeller +
                 ", name='" + name + '\'' +
-                ", surname='" + surname + '}';
+                ", surname='" + surname +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SellerHibernate that = (SellerHibernate) o;
+        return idSeller == that.idSeller && Objects.equals(name, that.name) && Objects.equals(surname, that.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idSeller, name, surname);
     }
 }
